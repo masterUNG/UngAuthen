@@ -13,6 +13,7 @@
 		C41AB797227154A3008ADB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C41AB796227154A3008ADB1F /* Assets.xcassets */; };
 		C41AB79A227154A3008ADB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C41AB798227154A3008ADB1F /* LaunchScreen.storyboard */; };
 		C46FA9DF22716C97006DF14D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FA9DE22716C97006DF14D /* RegisterViewController.swift */; };
+		C46FA9E122718E2C006DF14D /* WelfareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FA9E022718E2C006DF14D /* WelfareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C41AB799227154A3008ADB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C41AB79B227154A3008ADB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46FA9DE22716C97006DF14D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C46FA9E022718E2C006DF14D /* WelfareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelfareViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				C41AB78F227154A1008ADB1F /* AppDelegate.swift */,
 				C41AB791227154A1008ADB1F /* ViewController.swift */,
 				C41AB793227154A1008ADB1F /* Main.storyboard */,
+				C46FA9E022718E2C006DF14D /* WelfareViewController.swift */,
 				C46FA9DE22716C97006DF14D /* RegisterViewController.swift */,
 				C41AB796227154A3008ADB1F /* Assets.xcassets */,
 				C41AB798227154A3008ADB1F /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				C46FA9DF22716C97006DF14D /* RegisterViewController.swift in Sources */,
 				C41AB792227154A1008ADB1F /* ViewController.swift in Sources */,
 				C41AB790227154A1008ADB1F /* AppDelegate.swift in Sources */,
+				C46FA9E122718E2C006DF14D /* WelfareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

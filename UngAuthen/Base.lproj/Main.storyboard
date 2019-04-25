@@ -58,6 +58,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Bn-dG-bEc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67g-vO-Wtw">
                                 <rect key="frame" x="207" y="423" width="100" height="30"/>
@@ -95,6 +98,7 @@
                     </view>
                     <connections>
                         <segue destination="axh-yM-c8X" kind="show" identifier="GoRegister" id="ehM-uf-cDK"/>
+                        <segue destination="9mh-gn-SrX" kind="show" identifier="GoWelfare" id="fJo-uW-lUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -108,16 +112,86 @@
                     <view key="view" contentMode="scaleToFill" id="Vni-7o-Cfd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OtN-3I-zxy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Register" id="djQ-vf-1Xs">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="Back" id="LIZ-l6-uTt">
+                                            <connections>
+                                                <action selector="backButton:" destination="axh-yM-c8X" id="nDz-8G-L4N"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="CloudUpload" id="4tV-vB-1tB">
+                                            <connections>
+                                                <action selector="uploadButton:" destination="axh-yM-c8X" id="EMR-0S-rQn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fex-WM-YIe">
+                                <rect key="frame" x="107" y="143" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQi-cX-sEr">
+                                <rect key="frame" x="107" y="181" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQv-Zk-Pek">
+                                <rect key="frame" x="107" y="219" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OtN-3I-zxy" firstAttribute="leading" secondItem="lAs-45-MWO" secondAttribute="leading" id="3Rj-XL-gIj"/>
+                            <constraint firstItem="OtN-3I-zxy" firstAttribute="top" secondItem="lAs-45-MWO" secondAttribute="top" id="vqw-lD-Hoz"/>
+                            <constraint firstItem="OtN-3I-zxy" firstAttribute="trailing" secondItem="lAs-45-MWO" secondAttribute="trailing" id="xw8-YU-Kqk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lAs-45-MWO"/>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="fex-WM-YIe" id="Lt9-VX-Cf1"/>
+                        <outlet property="passwordTextField" destination="QQv-Zk-Pek" id="LKY-qg-TTQ"/>
+                        <outlet property="userTextField" destination="GQi-cX-sEr" id="eJB-gh-ZfV"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="BackAuthen" id="rbp-1T-DDZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYO-sY-QiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1065" y="21"/>
         </scene>
+        <!--Welfare-->
+        <scene sceneID="2uI-tX-QNG">
+            <objects>
+                <viewController title="Welfare" id="9mh-gn-SrX" customClass="WelfareViewController" customModule="UngAuthen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eMQ-hK-5IU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="z08-w7-GGl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L5H-6D-Wb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-906" y="21"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Back" width="36" height="36"/>
+        <image name="CloudUpload" width="36" height="36"/>
         <image name="Logo" width="168.5" height="170.5"/>
         <image name="Wallpaper" width="227.5" height="341"/>
     </resources>

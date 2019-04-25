@@ -23,11 +23,22 @@ class ViewController: UIViewController {
     
     
     @IBAction func singUpButton(_ sender: UIButton) {
-        
         print("You Click SignUp")
         performSegue(withIdentifier: "GoRegister", sender: nil)
-        
     }
+    
+    
+    
+    @IBAction func signInButton(_ sender: UIButton) {
+        goToWelfare()
+    }
+    
+    func goToWelfare() -> Void {
+        performSegue(withIdentifier: "GoWelfare", sender: nil)
+    }
+    
+    
+    
     
 
 }   // Main Class
