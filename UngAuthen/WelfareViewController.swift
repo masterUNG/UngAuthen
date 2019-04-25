@@ -39,8 +39,29 @@ class WelfareViewController: UIViewController {
             do {
                 
                 let  jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: [])
-                print(jsonResponse)
+//                print(jsonResponse)
                 
+
+                
+                guard let myDic: Dictionary = jsonResponse as! Dictionary<String, Any> else {
+                    return
+                }
+                
+//                print(myDic["contacts"]!)
+                
+                guard let jsonArray = myDic["contacts"]! as? [[String: Any]] else {return}
+ 
+                print("jsonArray ==> \(jsonArray)")
+//                print("jsonArray[0] ==> \(jsonArray[0])")
+                
+                let myDic2: Dictionary<String, Any>?
+                
+                
+                for myDic2: Dictionary in jsonArray {
+                    guard let idShow = myDic2["id"] else {
+                        return}
+                    print(idShow)
+                }
                 
             } catch let myError {
                 print(myError)
