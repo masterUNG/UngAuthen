@@ -9,6 +9,17 @@
 import UIKit
 
 class WelfareViewController: UIViewController {
+    
+    var idArray: [Int] = []
+    var nameStrings: [String] = []
+    
+    
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +71,21 @@ class WelfareViewController: UIViewController {
                 for myDic2: Dictionary in jsonArray {
                     guard let idShow = myDic2["id"] else {
                         return}
-                    print(idShow)
+                    
+                    guard let nameShow = myDic2["MVS_AST_NAME"] else {
+                        return}
+                    
+//                    self.idArray.append(idShow as! Int)
+                    self.nameStrings.append(nameShow as! String)
+                    
+                }
+                
+                for name in self.nameStrings {
+                    print(name)
+                }
+                
+                DispatchQueue.main.async {
+                    self.showView(name: self.nameStrings[1])
                 }
                 
             } catch let myError {
@@ -74,8 +99,15 @@ class WelfareViewController: UIViewController {
         
         
         
+        
+        
+        
     }   // ReadData
     
+    
+    func showView(name: String) -> Void {
+        nameLabel.text = name
+    }
 
   
 
